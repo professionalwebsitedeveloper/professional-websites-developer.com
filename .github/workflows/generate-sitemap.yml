@@ -1,1 +1,35 @@
+name: Generate Sitemap
+on:
+  push:
+    branches:
+      - main  # Runs on push to main
+  workflow_dispatch:  # Allows manual triggering
 
+jobs:
+  generate-sitemap:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Generate Sitemap
+        uses: cicirello/generate-sitemap@v2
+        with:
+          path-to-root: .  # Root directory of your site
+          base-url-path: "https://professionalwebsitedeveloper.com"  # Your GitHub Pages URL
+          include-html: true  # Include HTML files
+          include-pdf: false  # Exclude PDFs
+          exclude-files: |  # Files/dirs to exclude (optional)
+            - README.md
+            - .github/
+            - LICENSE
+          change-frequency: "weekly"  # Optional: default "weekly"
+          priority: "0.5"  # Optional: default "0.5"
+
+      - name: Commit and push sitemap
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add sitemap.xml
+          git commit -m "Auto-generated sitemap [skip ci]" || echo "No changes to commit"
+          git push
