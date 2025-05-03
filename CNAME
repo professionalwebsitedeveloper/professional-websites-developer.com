@@ -1,2 +1,4 @@
 
-http://professionalwebsitedeveloper.com/
+Type	Host	Value/Target	TTL
+ALIAS	@	professionalwebsitedeveloper.github.io.	Automatic
+CNAME	www	professionalwebsitedeveloper.github.io.	Automatic
