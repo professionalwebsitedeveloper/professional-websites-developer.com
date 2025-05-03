@@ -16,7 +16,7 @@ jobs:
         uses: cicirello/generate-sitemap@v2
         with:
           path-to-root: .  # Root directory of your site
-          base-url-path: "https://professionalwebsitedeveloper.com"  # Your GitHub Pages URL
+          base-url-path: "https://professionalwebsitedeveloper.github.io"  # Your GitHub Pages URL
           include-html: true  # Include HTML files
           include-pdf: false  # Exclude PDFs
           exclude-files: |  # Files/dirs to exclude (optional)
