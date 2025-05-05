@@ -1,2 +1,3 @@
-<!-- In your robots.txt -->
+User-agent: *
+Allow: /
 Sitemap: https://professionalwebsitedeveloper.github.io/professional-websites-developer.com/sitemap.xml
