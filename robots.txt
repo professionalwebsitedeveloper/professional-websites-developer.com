@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: private/
 Allow: public/
-Sitemap: https://professionalwebsitedeveloper.github.io/professional-websites-developer.com/sitemap_index.xml
+Sitemap: https://professionalwebsitedeveloper.github.io/sitemap_indext.xml
